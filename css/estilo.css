@@ -51,7 +51,8 @@ section {
 }
 
 .invisivel {
-    opacity: 0 !important;
+    opacity: 0;
+    z-index: -999;
 }
 
 .btn-top {
