@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+    list-style: none;
+}
+
+address {
+    font-style: normal;
+}
+
+html,
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    line-height: 1.4em;
+    text-align: justify;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+}
+
+main {
+    padding-top: 3em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+.container {
+    width: 100%;
+    padding: 0 1em;
+    margin: 0 auto;
+}
+
+.subtitulo {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-bottom: .5em;
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+}
+
+.invisivel {
+    opacity: 0 !important;
+}
+
+.btn-top {
+    transition: all .4s ease-in-out;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 1.5em;
+    height: 1.5em;
+    width: 1.5em;
+    background-color: #3e9cbb;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: -3px 3px 10px 3px rgb(70, 70, 70);
+}
+
+/* ==============   HEADER  ======================== */
+
+.header-titulo {
+    width: 100%;
+    padding: .5em;
+}
+.header-titulo .container {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    height: 2em;
+}
+
+.header-img {
+    height: calc(100vh - 3em);
+    background-image: url("../img/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aside-menu {
+    position: absolute;
+    top: -100vh;
+    right: 1em;
+    height: 100vh;
+    background-color: #3e9cbb;
+    width: 70%;
+    transition: all .4s ease-in-out;
+}
+
+.btn-aside {
+    position: absolute;
+    right: 1em;
+    top: 0;
+    font-size: 2em;
+    height: 1.5em;
+    width: 1.5em;
+    background-color: #3e9cbb;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.aside-menu-aberto {
+    top: 0;
+}
+.btn-aside i {
+    transition: all .6s ease-in-out;    
+}
+.btn-aside-aberto i {
+    transform: rotate(180deg);
+}
+
+
+.aside-container {
+    padding: 1em;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    color: #FFF;
+    font-size: 1em;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+    margin-top: 30%;
+    text-transform: uppercase;
+}
+
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    height: 20%;
+}
+
+.social-item {
+    transition: all .2s ease-in-out;
+}
+
+
+/* ==========   SERVIÇOS   ============= */
+
+#sessao-servicos img {
+    height: 10em;
+}
+
+.list-servicos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.servicos-item {
+    margin: 1em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+/* ==========   CONTATO   ============= */
+
+#sessao-contato {
+    background-color: #3e9cbb;
+    margin: 0;
+}
+
+#sessao-contato form {
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#sessao-contato label,
+.btn-enviar {
+    width: 100%;
+    margin-bottom: .5em;
+}
+#sessao-contato label span {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+#sessao-contato input,
+#sessao-contato textarea {
+    width: 100%;
+    border-radius: 3px;
+    padding: .5em;
+    border: 0;
+    outline: 0 none;
+}
+#sessao-contato input {
+    height: 2em;
+}
+#sessao-contato textarea {
+    resize: vertical;
+    min-height: 8em;
+}
+
+.btn-enviar {
+    text-align: right;
+}
+
+.btn-enviar button {
+    border: 0;
+    font-size: 1em;
+    padding: 5px 20px;
+    border-radius: 3px;
+    background: #464646;
+    color: #FFF;
+}
+
+
+
+/* ==========   FOOTER   ============= */
+
+.rodape-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2em 0;
+}
+
+.rodape-info > p:first-child {
+    margin-bottom: 1em;
+}
+
+.rodape-info address {
+    text-align: center;
+}
+
+
+.developer p {
+    text-align: center;
+}
+.developer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 425px) {
+    .aside-menu {
+        width: 50%;
+    }
+    .servicos-item {
+        width: 40%;
+    }
+    #sessao-contato label,
+    .btn-enviar {
+        width: 60%;
+    }
+    .rodape-info {
+        justify-content: space-between;
+    }
+    .rodape-info > p:first-child {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .logo {
+        height: 3em;
+    }
+    .container {
+        max-width: 720px;
+        padding: 0;
+    }
+    .btn-top {
+        font-size: 2em;
+        right: 2rem;
+    }
+    .header-img {
+        height: calc(100vh - 4em);
+    }
+    .aside-container {
+        font-size: 2em;
+    }
+    .aside-menu {
+        top: 0;
+        width: 30%;
+        right: 2em;
+    }
+    .menu-item:after {
+        transition: all .2s ease-in-out;
+        content: "";
+        border-bottom: 2px solid #FFF;
+        width: 0;
+        margin: 0 auto;
+        display: block;
+    }
+    .menu-item:hover:after {
+        width: 100%;
+    }
+    .btn-aside {
+        display: none;
+    }
+    .social-item:hover {
+        transform: translateY(-.2em);
+    }
+    .servicos-item {
+        transition: all .4s ease-in-out;
+        width: 25%;
+    }
+    .servicos-item:hover {
+        box-shadow: -7px 7px 10px 4px rgba(70, 70, 70, .5);
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-height: 320px) {
+    .menu {
+        margin-top: 10%;
+    }
+}
