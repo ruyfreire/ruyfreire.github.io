@@ -22,17 +22,18 @@ body {
     font-size: 18px;
     line-height: 1.4em;
     text-align: justify;
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
     position: relative;
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 }
 
-main {
-    padding-top: 3em;
+header {
+    padding-bottom: 3em;
 }
 
 section {
+    padding: 1em 0;
     margin-bottom: 2em;
 }
 
@@ -44,10 +45,21 @@ section {
 
 .subtitulo {
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 2em;
     margin-bottom: .5em;
-    text-align: center;
+    padding: 5px 0;
     border-bottom: 1px solid #CCC;
+    position: relative;
+}
+
+.subtitulo:after {
+    content: "";
+    display: block;
+    width: 2em;
+    height: 3px;
+    background-color: #3e9cbb;
+    bottom: -2px;
+    position: absolute;
 }
 
 .invisivel {
@@ -68,6 +80,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     cursor: pointer;
     border-radius: 2px;
     box-shadow: -3px 3px 10px 3px rgb(70, 70, 70);
@@ -244,6 +257,7 @@ section {
     border-radius: 3px;
     background: #464646;
     color: #FFF;
+    cursor: pointer;
 }
 
 
@@ -269,6 +283,7 @@ section {
 
 .developer p {
     text-align: center;
+    padding: .5em;
 }
 .developer a:hover {
     text-decoration: underline;

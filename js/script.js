@@ -1,58 +1,53 @@
-window.addEventListener('load', function(){
-    const btnAside = document.querySelector('.btn-aside');
-    const asideMenu = document.querySelector('.aside-menu');
-    const botoesMenu = document.querySelectorAll(".menu-item");
-    const btnTop = document.querySelector('.btn-top');
-    let topPagina = document.body.scrollTop;
+$(window).ready(function(){
+    const btnAside = $('.btn-aside');
+    const asideMenu = $('.aside-menu');
+    const botoesMenu = $('.menu-item');
+    const btnTop = $('.btn-top');
+    let topPagina = $('body').scrollTop();
     botaoTopo();
 
 
     // evento click, links do menu
-    for(let i = 0; i < botoesMenu.length; i++) {
-        botoesMenu[i].addEventListener('click', function(event){
+    botoesMenu.each(function(i, e) {
+        $(e).click(function(event){
             event.preventDefault();
-            let alvo = document.querySelector(this.children[0].getAttribute('href'));
-            scrollSuave(alvo.offsetTop); 
-        })
-    }
+            let alvo = $(this).children().attr('href');
+            scrollSuave($(alvo).offset().top);
+        });
+    });
 
     // evento click botao topo
-    btnTop.addEventListener('click', function() {
-        scrollSuave(0);
-    })
+    btnTop.click(function(){scrollSuave(0)});
 
 
     // evento click para abrir/fechar menu
-    btnAside.addEventListener('click', function(){
-        btnAside.classList.toggle('btn-aside-aberto');
-        asideMenu.classList.toggle('aside-menu-aberto');
+    btnAside.click(function() {
+        btnAside.toggleClass('btn-aside-aberto');
+        asideMenu.toggleClass('aside-menu-aberto');
     });
 
     
 
     // evento scroll no body para exibir botao topo
-    document.body.addEventListener('scroll', function() {
-        topPagina = document.body.scrollTop;
+    $('body').scroll(function() {
+        topPagina = $('body').scrollTop();
         botaoTopo();
     });
 
     // executa scroll suuave
     function scrollSuave(alvo) {
-        document.body.scrollTo({
-            top: alvo,
-            behavior: 'smooth'
-        })
+        $('html, body').animate({scrollTop: alvo}, 500);
     }
 
     // inserir ou remover classe que esconde botao top
     function botaoTopo() {
-        if(topPagina <= window.innerHeight) {
-            btnTop.classList.add('invisivel');
+        if(topPagina < $(window).height()) {
+            btnTop.addClass('invisivel');
         }
-        if(topPagina > window.innerHeight) {
-            btnTop.classList.remove('invisivel');
-            btnAside.classList.remove('btn-aside-aberto');
-            asideMenu.classList.remove('aside-menu-aberto');
+        if(topPagina >= $(window).height()) {
+            btnTop.removeClass('invisivel');
+            btnAside.removeClass('btn-aside-aberto');
+            asideMenu.removeClass('aside-menu-aberto');
         }
     }
 });
