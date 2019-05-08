@@ -183,7 +183,7 @@ section {
 /* ==========   SERVIÇOS   ============= */
 
 #sessao-servicos img {
-    height: 10em;
+    height: 7em;
 }
 
 .list-servicos {
@@ -200,6 +200,39 @@ section {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.list-servicos .esconde {
+    display: none;
+    transition: all .4s ease-in-out;
+}
+
+.exibindo {
+    height: 0;
+    transition: all .4s ease-in-out;
+}
+
+.exibe {
+    box-shadow: 2px 2px 8px -1px rgba(70, 70, 70, .5) inset;
+}
+
+.esconde-fix {
+    /* padding: 4em; */
+}
+
+.servicos-desc {
+    box-shadow: -5px -5px -10px -5px rgba(70, 70, 70, .5);
+    width: 100%;
+    transition: all .4s ease-in-out;
+    overflow: hidden;
+}
+
+.servicos-desc p {
+    padding: .5em;
+}
+
+.servicos-item.ativo {
+    box-shadow: 2px 2px 8px -1px rgba(70, 70, 70, .5) inset;
 }
 
 
@@ -297,12 +330,12 @@ section {
 
 
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 375px) {
     .aside-menu {
         width: 50%;
     }
     .servicos-item {
-        width: 40%;
+        width: 30%;
     }
     #sessao-contato label,
     .btn-enviar {
@@ -363,6 +396,9 @@ section {
     .servicos-item:hover {
         box-shadow: -7px 7px 10px 4px rgba(70, 70, 70, .5);
         cursor: pointer;
+    }
+    #sessao-servicos img {
+        height: 10em;
     }
 }
 
