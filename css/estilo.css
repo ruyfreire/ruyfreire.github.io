@@ -18,14 +18,13 @@ address {
 
 html,
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'PT Serif', serif;
     font-size: 18px;
     line-height: 1.4em;
     text-align: justify;
     height: 100%;
     overflow-x: hidden;
     position: relative;
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 }
 
 header {
@@ -47,7 +46,7 @@ section {
     text-transform: uppercase;
     font-size: 2em;
     margin-bottom: .5em;
-    padding: 5px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #CCC;
     position: relative;
 }
@@ -55,11 +54,11 @@ section {
 .subtitulo:after {
     content: "";
     display: block;
-    width: 2em;
-    height: 3px;
-    background-color: #3e9cbb;
-    bottom: -2px;
     position: absolute;
+    width: 3em;
+    height: 4px;
+    background-color: #3786a0;
+    bottom: -2px;
 }
 
 .invisivel {
@@ -75,7 +74,7 @@ section {
     font-size: 1.5em;
     height: 1.5em;
     width: 1.5em;
-    background-color: #3e9cbb;
+    background-color: #3786a0;
     color: #FFF;
     display: flex;
     align-items: center;
@@ -112,7 +111,7 @@ section {
     top: -100vh;
     right: 1em;
     height: 100vh;
-    background-color: #3e9cbb;
+    background-color: #3786a0;
     width: 70%;
     transition: all .4s ease-in-out;
 }
@@ -124,7 +123,7 @@ section {
     font-size: 2em;
     height: 1.5em;
     width: 1.5em;
-    background-color: #3e9cbb;
+    background-color: #3786a0;
     color: #FFF;
     display: flex;
     align-items: center;
@@ -221,7 +220,7 @@ section {
 /* ==========   CONTATO   ============= */
 
 #sessao-contato {
-    background-color: #3e9cbb;
+    background-color: #3786a0;
     margin: 0;
 }
 
@@ -247,13 +246,12 @@ section {
 #sessao-contato input,
 #sessao-contato textarea {
     width: 100%;
-    border-radius: 3px;
     padding: .5em;
     border: 0;
     outline: 0 none;
 }
 #sessao-contato input {
-    height: 2em;
+    height: 2.5em;
 }
 #sessao-contato textarea {
     resize: vertical;
@@ -267,9 +265,8 @@ section {
 .btn-enviar button {
     border: 0;
     font-size: 1em;
-    padding: 5px 20px;
-    border-radius: 3px;
-    background: #464646;
+    padding: .5em 2em;
+    background: #222;
     color: #FFF;
     cursor: pointer;
 }
@@ -354,12 +351,13 @@ section {
         right: 2em;
     }
     .menu-item:after {
-        transition: all .2s ease-in-out;
         content: "";
-        border-bottom: 2px solid #FFF;
-        width: 0;
-        margin: 0 auto;
         display: block;
+        width: 0;
+        height: 4px;
+        margin: .2em auto 0;
+        background: #fff;
+        transition: all .2s ease-in-out;
     }
     .menu-item:hover:after {
         width: 100%;
