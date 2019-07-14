@@ -20,11 +20,12 @@ html,
 body {
     font-family: 'PT Serif', serif;
     font-size: 18px;
+    letter-spacing: .5px;
     line-height: 1.4em;
-    text-align: justify;
     height: 100%;
     overflow-x: hidden;
     position: relative;
+    background-color: #fafafa;
 }
 
 header {
@@ -46,19 +47,9 @@ section {
     text-transform: uppercase;
     font-size: 2em;
     margin-bottom: .5em;
-    padding: 10px 0;
-    border-bottom: 1px solid #CCC;
+    padding: 15px 0;
+    border-bottom: 1px solid #3786a0;
     position: relative;
-}
-
-.subtitulo:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 3em;
-    height: 4px;
-    background-color: #3786a0;
-    bottom: -2px;
 }
 
 .invisivel {
@@ -263,14 +254,21 @@ section {
 }
 
 .btn-enviar button {
-    border: 0;
-    font-size: 1em;
+    border: 2px solid #000;
+    font-size: .8em;
+    letter-spacing: 1px;
     padding: .5em 2em;
-    background: #222;
-    color: #FFF;
+    background: #fff;
+    color: #000;
     cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
+.btn-enviar button:hover {
+    box-shadow: none;
+    transform: translateY(1px);
+}
 
 
 /* ==========   FOOTER   ============= */
@@ -366,13 +364,15 @@ section {
         display: none;
     }
     .social-item:hover {
-        transform: translateY(-.2em);
+        transform: translateY(-10px);
     }
     .servicos-item {
         width: 25%;
+        transition: all .1s ease-in-out;
     }
     .servicos-item:hover {
         box-shadow: -7px 7px 10px 4px rgba(70, 70, 70, .5);
+        transform: translateY(-2px);
         cursor: pointer;
     }
     #sessao-servicos img {
