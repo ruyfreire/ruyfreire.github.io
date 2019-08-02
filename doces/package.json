@@ -1,0 +1,30 @@
+{
+  "name": "artesanato",
+  "version": "1.0.0",
+  "description": "Site doces e artesanato",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "banco": "node banco.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruyfreire/artesanato.git"
+  },
+  "author": "Ruy Freire",
+  "license": "ISC",
+  "homepage": "https://github.com/ruyfreire/artesanato#readme",
+  "dependencies": {
+    "sqlite3": "^4.0.9"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-uglify": "^3.0.1",
+    "postcss-preset-env": "^6.5.0"
+  }
+}
